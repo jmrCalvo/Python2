@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+import os
+import sys
+
+
+#Write a function that receives as a parameter a path that represents a directory on the system, recursively browses the file structure and directories that it contains and displays in the console all the paths it has traveled. You are NOT allowed to use os.walk.
+try:
+	for (root,directories,files) in os.walk("."):
+		for fileName in files:
+			full_fileName = os.path.join(root,fileName)
+			print (full_fileName
